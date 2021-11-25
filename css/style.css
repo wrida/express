@@ -1,0 +1,19 @@
+nav{
+    display: flex;
+    flex-direction: row;
+    justify-content:left;
+    font-size:70px;
+    font-family:Arial, Helvetica, sans-serif;
+    color: blue;
+}
+h1{
+    display: flex;
+    flex-direction: row;
+    justify-content:left;
+    font-size:60px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: darkred;
+}
+body{
+    background-color:cyan;
+}
