@@ -8,6 +8,15 @@ const app = express();
 //}
 
 
+app.use((req,res,next)=>{
+let date = new Date();
+console.log(date.getHours())
+if(date.getDay()>0 && date.getDay()<6 && date.getHours()>=9 && date.getHours()<17){
+    next()
+}else{
+    res.send('we are not working')
+}
+})
 // endpoint route handler
 app.get('/',(req, res) => {
     res.sendFile(__dirname +'/views/Home.html');
@@ -23,9 +32,6 @@ app.get('/css/style.css', (req, res) =>{
     res.sendFile(__dirname +'/css/style.css');
 })
 //getHours and date
-let Date = new Date();
-//Date.getHours();
-Date.getDay();
-console.log(getDay(2))
+
 //console.log(module)
 app.listen(4000,(err)=>err ? console.log(err) :console.log("server is running"))
